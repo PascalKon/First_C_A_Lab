@@ -1,0 +1,11 @@
+--------MINOR--------
+
+	Minor is an in-order processor model with a fixed pipeline but configurable data structures and 
+execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and
+allows visualisation of an instruction’s position in the pipeline through the MinorTrace/minorview.py format/tool. 
+The intention is to provide a framework for micro-architecturally correlating the model with a particular, 
+chosen processor with similar capabilities.The model isn’t currently capable of multithreading but 
+there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
+
+
+--------SIMPLE_CPU--------
