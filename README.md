@@ -27,6 +27,13 @@ There are three different type of processors, which of one has different default
    * **_sim_insts:_** The number of instructions simulated (Count) (/hellostats.txt line 10)
    * **_host_inst_rate:_** The simulator instruction rate (inst/sec) (/hellostats.txt line 12)
 
-**c** 
+**c.** Commited instructions: 5028 - Number of instructions committed (from /hellostats.txt file on line 19)
+
+**d.** L2 accesses: 479 - Number of demand (read+write) accesses (frmo /hellostats.txt file on line 426) 
+
+Another way to find the L2 accesses is by L1 misses because for every L1 cache miss (instruction or data cache) the processor will go to L2 cache to search the information.
+
+### **_Question 3_**
+
 
 
