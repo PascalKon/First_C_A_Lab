@@ -84,6 +84,26 @@ We made two changes on the parameters and we observed the results. The first sim
 * hostSeconds = 0.07      &emsp; &emsp;   # Real time elapsed on the host (Seconds)
 * hostTickRate = 367859704    &emsp; &emsp;   # The number of ticks simulated per host scd
 
+**_MINOR CPU - COMMENTS_**
 
 
 
+**TIMINGSIMPLE CPU**
+* simSeconds = 0.000047  &emsp; &emsp;   # Number of seconds simulated (Seconds)
+* simTicks = 46758000    &emsp; &emsp;   # Number of ticks simulated (Tick)
+* hostSeconds = 0.02     &emsp; &emsp;   # Real time elapsed on the host (Seconds)
+* hostTickRate = 875450639 &emsp; &emsp; # The number of ticks simulated per host scd
+* hostInstRate = 481882    &emsp; &emsp; # Simulator instruction rate
+
+**TIMINGSIMPLE CPU with frequency 4.2GHz**
+* simSeconds = 0.000033  &emsp; &emsp;   # Number of seconds simulated (Seconds)
+* simTicks = 33306910    &emsp; &emsp;   # Number of ticks simulated (Tick)
+* hostSeconds = 0.04     &emsp; &emsp;   # Real time elapsed on the host (Seconds)
+* hostTickRate = 2097298917 &emsp; &emsp; # The number of ticks simulated per host scd
+* hostInstRate = 821669    &emsp; &emsp; # Simulator instruction rate
+
+**TIMINGSIMPLE CPU with frequency 4.2GHz and DDR4_2400_8x8**
+* hostSeconds = 0.03     &emsp; &emsp;   # Real time elapsed on the host (Seconds)
+* hostTickRate = 1333387316 &emsp; &emsp; # The number of ticks simulated per host scd
+
+**_TIMINGSIMPLE CPU - COMMENTS_**
