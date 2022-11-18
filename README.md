@@ -62,7 +62,7 @@ The simulation on the two different types of CPUs has different results. On the 
 On the other side, the host time is smaller on the timing simple CPU model than the minor CPU due to the way that access to the memory. The pipeline on the minor CPU model execute the operations faster, but the data needs more time to come on the processor.
 
 **c.**
-We made two changes on the parameters and we observed the results. The first simulation has as a parameter the increament of the CPU frequency from 1GHz (default), to 4.2GHz. The second simulation has as parameters, frequency on 4.2GHz and another type of memory from DDR3_1600_8x8 (default) to DDR4_2400_8x8. The results are presented below:
+We made two changes on the parameters and we observed the results. The first simulation has as a parameter the increament of the CPU frequency from 1GHz (default), to 4.2GHz. The second simulation has as parameters, frequency on 4.2GHz and another type of memory ,from  default to DDR4_2400_8x8. The results are presented below:
 
 **MINOR CPU**
 * simSeconds = 0.000033  &emsp; &emsp;   # Number of seconds simulated (Seconds)
