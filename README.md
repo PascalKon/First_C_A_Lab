@@ -85,8 +85,9 @@ We made two changes on the parameters and we observed the results. The first sim
 * hostTickRate = 367859704    &emsp; &emsp;   # The number of ticks simulated per host scd
 
 **_MINOR CPU - COMMENTS_**
-
-
+We can observe that by increasing the frequency of the CPU, the simulation seconds are decreased and the simulation Ticks too. That is an expected result because the total time of a process depends on the frequency of the processor. Also, the CPI parameter was increased and the IPC parameter was decreased due to the increament of the frequency. The disadvantage by icreasing the frequency is that the total host time was increased 
+<br />
+The change on the memory type has only affect on the host time which was decreased. This is an expected result because another type of memory which has lower access time decreases the time that the CPU needs to take the data and store them on the caches. The final host time became the same as the default value and the simulation time is lower due to the increament on the CPU frequency.
 
 **TIMINGSIMPLE CPU**
 * simSeconds = 0.000047  &emsp; &emsp;   # Number of seconds simulated (Seconds)
@@ -107,3 +108,4 @@ We made two changes on the parameters and we observed the results. The first sim
 * hostTickRate = 1333387316 &emsp; &emsp; # The number of ticks simulated per host scd
 
 **_TIMINGSIMPLE CPU - COMMENTS_**
+Same results as the minor CPU we can see by increasing the frequency on the timing simple CPU. The simulated seconds were decreased and the host time was increased. By changing also the type of memory, the host time was decreased because the access time on the memory is smaller now. By comparing the affect of the change on the memory on the two different models of CPU, another type of it has bigger affect on the minor CPU model. On the other side, the impact of the CPU frequency is bigger on the timing simple CPU which decreased the simulation time by 30%. On the minor CPU model the reduction is about 20%.  
