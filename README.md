@@ -39,7 +39,7 @@ The gem5 simulator has to different models for in-order CPU simulations: the Min
 
  **MINOR CPU**
  
-  Minor is an in-order processir model with a fixed pipeline but congigurable data stuctures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction’s position in the pipeline through the MinorTrace/minorview.py format/tool. 
+ Minor is an in-order processir model with a fixed pipeline but congigurable data stuctures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction’s position in the pipeline through the MinorTrace/minorview.py format/tool. 
 The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.The model isn’t currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
 
 **SIMPLE CPU**
@@ -57,7 +57,9 @@ The intention is to provide a framework for micro-architecturally correlating th
 * hostSeconds = 0.02   &emsp; &emsp;     # Real time elapsed on the host (Seconds)
 
 **b.**
-
+The simulation on the two different types of CPUs has different results. On the minor CPU model the simulation seconds are less than the seconds on the timing simple CPU because the minor model has fixed pipeline, so can run some order "in parallel". On the timing simple CPU the process stops until the data come from the memory, so the simulation time is much bigger.
+<br />
+On the other side, the host time is smaller on the timing simple CPU model than the minor CPU due to the way that access to the memory. The pipeline on the minor CPU model execute the operations faster, but the data needs more time to come on the processor.
 
 **c.**
 We made two changes on the parameters and we observed the results. The first simulation has as a parameter the increament of the CPU frequency from 1GHz (default), to 4.2GHz. The second simulation has as parameters, frequency on 4.2GHz and another type of memory from DDR3_1600_8x8 (default) to DDR4_2400_8x8. The results are presented below:
@@ -109,3 +111,6 @@ The change on the memory type has only affect on the host time which was decreas
 
 **_TIMINGSIMPLE CPU - COMMENTS_**
 Same results as the minor CPU we can see by increasing the frequency on the timing simple CPU. The simulated seconds were decreased and the host time was increased. By changing also the type of memory, the host time was decreased because the access time on the memory is smaller now. By comparing the affect of the change on the memory on the two different models of CPU, another type of it has bigger affect on the minor CPU model. On the other side, the impact of the CPU frequency is bigger on the timing simple CPU which decreased the simulation time by 30%. On the minor CPU model the reduction is about 20%.  
+
+### **_Review for the lab_**
+The lab was very useful to understand critical parameters that affect the performance of each program (such as simulation time, host time, cpi), and it help us to understand the different type of processors, the affect of the pipeline and the memory on each program. Also, we increase our knowledge on the linux OS. So, overall the lab was very useful to us. The only diadvantage was the difficult to install all the appropriate programs and the appropriate versions on the ubuntu, on python and on the gcc. It is needed to intall three different types of Ubuntu OS to make all the versions that the gem 5 need, compatible with the version 20.04 to work correctly on our PCs. However that was only for the first lab only and now we have ready our set-up for the next labs.
