@@ -49,12 +49,12 @@ The intention is to provide a framework for micro-architecturally correlating th
 **a.** The program in that that we wrote is a simple program that creates an array 20x20 dimanesion and fills it with some values.
 
 **MINOR CPU**
-* simSeconds = 0.000033     # Number of seconds simulated (Seconds)
-* hostSeconds = 0.07        # Real time elapsed on the host (Seconds)
+* simSeconds = 0.000033  &emsp; &emsp;     # Number of seconds simulated (Seconds)
+* hostSeconds = 0.07 &emsp; &emsp;       # Real time elapsed on the host (Seconds)
 
 **TIMINGSIMPLE CPU**
-* simSeconds = 0.000047     # Number of seconds simulated (Seconds)
-* hostSeconds = 0.02        # Real time elapsed on the host (Seconds)
+* simSeconds = 0.000047  &emsp; &emsp;   # Number of seconds simulated (Seconds)
+* hostSeconds = 0.02   &emsp; &emsp;     # Real time elapsed on the host (Seconds)
 
 **b.**
 
@@ -63,22 +63,27 @@ The intention is to provide a framework for micro-architecturally correlating th
 We made two changes on the parameters and we observed the results. The first simulation has as a parameter the increament of the CPU frequency from 1GHz (default), to 4.2GHz. The second simulation has as parameters, frequency on 4.2GHz and another type of memory from DDR3_1600_8x8 (default) to DDR4_2400_8x8. The results are presented below:
 
 **MINOR CPU**
-* simSeconds = 0.000033     # Number of seconds simulated (Seconds)
-* simTicks = 33014000       # Number of ticks simulated (Tick)
-* hostSeconds = 0.07        # Real time elapsed on the host (Seconds)
-* hostTickRate = 491339527  # The number of ticks simulated per host scd
-* hostInstRate = 274062     # Simulator instruction rate
-* system.cpu.cpi = 3.580112 # CPI: cycles per instruction
-* system.cpu.ipc = 0.279321 # IPC: instructions per cycle
+* simSeconds = 0.000033  &emsp; &emsp;   # Number of seconds simulated (Seconds)
+* simTicks = 33014000    &emsp; &emsp;   # Number of ticks simulated (Tick)
+* hostSeconds = 0.07     &emsp; &emsp;   # Real time elapsed on the host (Seconds)
+* hostTickRate = 491339527 &emsp; &emsp; # The number of ticks simulated per host scd
+* hostInstRate = 274062    &emsp; &emsp; # Simulator instruction rate
+* system.cpu.cpi = 3.580112 &emsp; &emsp; # CPI: cycles per instruction
+* system.cpu.ipc = 0.279321 &emsp; &emsp; # IPC: instructions per cycle
 
 **MINOR CPU with frequency 4.2GHz**
-* simSeconds = 0.000026     # Number of seconds simulated (Seconds)
-* simTicks = 26224982       # Number of ticks simulated (Tick)
-* hostSeconds = 0.09        # Real time elapsed on the host (Seconds)
-* hostTickRate = 300449464  # The number of ticks simulated per host scd
-* hostInstRate = 211017     # Simulator instruction rate
-* system.cpu.cpi = 5.974570 # CPI: cycles per instruction
-* system.cpu.ipc = 0.167376 # IPC: instructions per cycle
+* simSeconds = 0.000026    &emsp; &emsp;  # Number of seconds simulated (Seconds)
+* simTicks = 26224982      &emsp; &emsp;  # Number of ticks simulated (Tick)
+* hostSeconds = 0.09       &emsp; &emsp;  # Real time elapsed on the host (Seconds)
+* hostTickRate = 300449464  &emsp; &emsp; # The number of ticks simulated per host scd
+* hostInstRate = 211017    &emsp; &emsp;  # Simulator instruction rate
+* system.cpu.cpi = 5.974570 &emsp; &emsp; # CPI: cycles per instruction
+* system.cpu.ipc = 0.167376 &emsp; &emsp; # IPC: instructions per cycle
+
+**MINOR CPU with frequency 4.2GHz and DDR4_2400_8x8**
+* hostSeconds = 0.07      &emsp; &emsp;   # Real time elapsed on the host (Seconds)
+* hostTickRate = 367859704    &emsp; &emsp;   # The number of ticks simulated per host scd
+
 
 
 
