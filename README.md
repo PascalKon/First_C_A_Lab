@@ -46,4 +46,39 @@ The intention is to provide a framework for micro-architecturally correlating th
 
  The simple CPU is an in-order model that it is used when the detailed model is not necessary and can support the new memory system. Simple CPU has three sub-categories: the BaseSimple CPU, the AtomicSimple CPU and the TimingSimple CPU models. The BaseSimple CPU has functions for checking interrupts and handling pre-execute and post-execute actions. Also can set up a fetch request. The BaseSimple CPU model cannot be run on its owm but is used  within the other two Simple CPU models. The AtomicSimple CPU has the characteristic that uses atomic memory acesses. It estimates the overall cache access time and connects the CPU with the cache. It has functions to read-write the memory and to monitor the CPU in every cycle. Finally, the TimingSimple CPU model uses timing memory access. It stalls on cache accesses and waits for the memory system to respond prior to proceeding. It also implements the same functions as the AtomicSimple model.
 
-**a.** The program in that that we wrote is a simple program that 
+**a.** The program in that that we wrote is a simple program that creates an array 20x20 dimanesion and fills it with some values.
+
+**MINOR CPU**
+* simSeconds = 0.000033     # Number of seconds simulated (Seconds)
+* hostSeconds = 0.07        # Real time elapsed on the host (Seconds)
+
+**TIMINGSIMPLE CPU**
+* simSeconds = 0.000047     # Number of seconds simulated (Seconds)
+* hostSeconds = 0.02        # Real time elapsed on the host (Seconds)
+
+**b.**
+
+
+**c.**
+We made two changes on the parameters and we observed the results. The first simulation has as a parameter the increament of the CPU frequency from 1GHz (default), to 4.2GHz. The second simulation has as parameters, frequency on 4.2GHz and another type of memory from DDR3_1600_8x8 (default) to DDR4_2400_8x8. The results are presented below:
+
+**MINOR CPU**
+* simSeconds = 0.000033     # Number of seconds simulated (Seconds)
+* simTicks = 33014000       # Number of ticks simulated (Tick)
+* hostSeconds = 0.07        # Real time elapsed on the host (Seconds)
+* hostTickRate = 491339527  # The number of ticks simulated per host scd
+* hostInstRate = 274062     # Simulator instruction rate
+* system.cpu.cpi = 3.580112 # CPI: cycles per instruction
+* system.cpu.ipc = 0.279321 # IPC: instructions per cycle
+
+**MINOR CPU with frequency 4.2GHz**
+* simSeconds = 0.000026     # Number of seconds simulated (Seconds)
+* simTicks = 26224982       # Number of ticks simulated (Tick)
+* hostSeconds = 0.09        # Real time elapsed on the host (Seconds)
+* hostTickRate = 300449464  # The number of ticks simulated per host scd
+* hostInstRate = 211017     # Simulator instruction rate
+* system.cpu.cpi = 5.974570 # CPI: cycles per instruction
+* system.cpu.ipc = 0.167376 # IPC: instructions per cycle
+
+
+
