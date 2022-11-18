@@ -35,5 +35,15 @@ Another way to find the L2 accesses is by L1 misses because for every L1 cache m
 
 ### **_Question 3_**
 
+The gem5 simulator has to different models for in-order CPU simulations: the Minor CPU and the simple CPU.
 
+ **MINOR CPU**
+ 
+  Minor is an in-order processir model with a fixed pipeline but congigurable data stuctures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction’s position in the pipeline through the MinorTrace/minorview.py format/tool. 
+The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.The model isn’t currently capable of multithreading but there are THREAD comments in key places where stage data needs to be arrayed to support multithreading.
 
+**SIMPLE CPU**
+
+ The simple CPU is an in-order model that it is used when the detailed model is not necessary and can support the new memory system. Simple CPU has three sub-categories: the BaseSimple CPU, the AtomicSimple CPU and the TimingSimple CPU models. The BaseSimple CPU has functions for checking interrupts and handling pre-execute and post-execute actions. Also can set up a fetch request. The BaseSimple CPU model cannot be run on its owm but is used  within the other two Simple CPU models. The AtomicSimple CPU has the characteristic that uses atomic memory acesses. It estimates the overall cache access time and connects the CPU with the cache. It has functions to read-write the memory and to monitor the CPU in every cycle. Finally, the TimingSimple CPU model uses timing memory access. It stalls on cache accesses and waits for the memory system to respond prior to proceeding. It also implements the same functions as the AtomicSimple model.
+
+**a.** The program in that that we wrote is a simple program that 
